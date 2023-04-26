@@ -1,0 +1,73 @@
+html {
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    background-color: rgb(202, 246, 248);
+}   
+body{
+    margin-top: 100px;
+}
+p{
+    padding: 5%;
+} 
+#cartão {
+    width: 300px;
+    height: 180px;
+    border-radius: 15px;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.9);
+    background-color:  rgb(173, 241, 245) ;
+    padding: 20px;
+    font-size: 10px;
+    font-family: Arial, sans-serif;  
+    text-align: left;
+    margin: 0% auto;
+    margin-top: 100px;
+}
+h1{
+    color:#cc8105;
+    text-shadow: 1px 1px rgb(255, 255, 255);
+    
+}
+h2{
+    margin-top: 50px;
+}
+.svc{
+    color:#cc8105;
+    text-shadow: 1px 1px rgb(255, 255, 255);
+    font-size: 25px;
+    margin-top:-5px;
+    
+}
+input{
+	background-color: transparent;
+	border: 0px;
+    font-family: 'OCR A Extended', sans-serif;
+    color:#cc8105;
+    text-shadow: 1px 1px rgba(8, 8, 8, 0.993);
+
+}
+#nome {
+    width: 199px;
+    height: 20px;
+    font-size: 20px;
+    margin-top: 20px;
+}
+#validity {
+    width: 70px;
+    height: 22px;
+    font-size: 20px;
+}
+#numero{
+    width: 290px;
+    height: 30px;
+    font-size: 25px;
+    margin-top: 20px;
+}
+img {
+    width: 45px;
+    height: 30px;
+}
+
+input:focus {
+    outline: none;
+}

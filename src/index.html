@@ -4,10 +4,30 @@
     <meta charset="utf-8">
     <title>Tarjeta de crédito válida</title>
     <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.cdnfonts.com/css/ocr-a-extended" rel="stylesheet">
+                
   </head>
   <body>
-    <header></header>
-    <main></main>
+    <header>
+      <h1>VALIDAÇÃO DE CARTÃO DE CRÉDITO</h1>
+      </header>
+    <main>
+      <div>
+            <h2>
+                Preencha corretamente os campos,<br> aperte enter para verificar se o cartão é valido
+            </h2> 
+            
+      </div>  
+      <div class = conteiner>
+            <div id = cartão>
+                <h1 class="svc">SVC</h1>
+                <img src="chip.png">
+ 			    <input name="numero" id="numero"  placeholder="NUMERO DO CARTÃO"></input><br><br>
+		        <input class = "inputi" name="nome" id="nome"  placeholder="NOME"></input>
+                <input class = "inputi" name="validity" id="validity" placeholder="MM/AA"></input><br>
+            </div>
+      </div>    
+    </main>
     <footer></footer>
     <script src="index.js" type="module"></script>
   </body>
