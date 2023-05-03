@@ -3,19 +3,23 @@ html {
     width: 100%;
     text-align: center;
     background-color: rgb(202, 246, 248);
-}   
-body{
+    font-family: system-ui;
+}
+
+body {
     margin-top: 100px;
 }
-p{
+
+p {
     padding: 5%;
-} 
+}
+
 #cartão {
     width: 300px;
     height: 180px;
     border-radius: 15px;
     box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.9);
-    background-color:  rgb(173, 241, 245);
+    background-color: rgb(173, 241, 245);
     padding: 20px;
     font-size: 10px;
     font-family: Arial, sans-serif;
@@ -23,16 +27,32 @@ p{
     margin: 0% auto;
     /* margin-top: 100px; */
 }
-h1{
-    color:#cc8105;
+
+h1 {
+    color: #cc8105;
     text-shadow: 1px 1px rgb(255, 255, 255);
-    
+
 }
-h2{
+
+h2 {
     margin-top: 50px;
 }
-.svc{
-    color:#cc8105;
+
+#message {
+    height: 50%;
+    width: 100%;
+    padding: 15px;
+}   
+
+.text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.svc {
+    color: #cc8105;
     text-shadow: 1px 1px rgb(255, 255, 255);
     font-size: 25px;
     /* margin-top:-5px; */
@@ -42,11 +62,13 @@ h2{
     /* box-sizing: border-box; */
     position: absolute;
 }
+
 .flag {
     position: absolute;
 }
+
 .flags {
-    float:left;
+    float: left;
     margin-right: 5px;
     clear: left;
     /* display: none; */
@@ -57,31 +79,42 @@ h2{
     top: 0px;
     left: 250px;
 }
-input{
-	background-color: transparent;
-	border: 0px;
+
+input {
+    background-color: transparent;
+    border: 0px;
     font-family: 'OCR A Extended', sans-serif;
-    color:#cc8105;
+    color: #cc8105;
     text-shadow: 1px 1px rgba(8, 8, 8, 0.993);
 
 }
+
 #nome {
     width: 199px;
     height: 20px;
     font-size: 20px;
     margin-top: 20px;
 }
+
 #validity {
     width: 70px;
     height: 22px;
     font-size: 20px;
 }
-#numero{
+
+#numero {
     width: 290px;
     height: 30px;
     font-size: 25px;
     margin-top: 70px;
 }
+
+.chip {
+    position: relative;
+    top: 50px;
+    left: -16%;
+}
+
 img {
     width: 45px;
     height: 30px;
@@ -92,20 +125,56 @@ input:focus {
 }
 
 .conteiner {
-    height: 500px;
+    height: 350px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
+
 .dados {
     width: 100%;
     height: 40px;
     position: absolute;
-    background-color:  rgb(157, 239, 243);
+    background-color: rgb(157, 239, 243);
     bottom: 0;
     display: flex;
     text-align: center;
     justify-content: center;
+
     align-items: center;
+}
+
+#visa {
+    display: none;
+}
+
+#master {
+    display: none;
+}
+
+#elo {
+    display: none;
+}
+
+#american {
+    display: none;
+}
+
+#hipercard {
+    display: none;
+}
+
+#btnReload {
+
+border-radius: 5px;
+
+margin-top: 30px;
+
+padding: 15px;
+
+background-color: #f0ae44;
+}
+#btnReload:hover {   
+    background-color: #cc8105;
 }
