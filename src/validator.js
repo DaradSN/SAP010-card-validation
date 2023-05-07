@@ -1,60 +1,41 @@
-export function isValid(valueInput) {
+const validator = {
 
-  let soma = 0;
-  let digitosPares = false;
-  for (let i = valueInput.length - 1; i >= 0; i--) {
-    let digito = parseInt(valueInput.charAt(i));
-    if (digitosPares) {
-      digito *= 2;
-      if (digito > 9) {
-        digito -= 9;
+  isValid: function(valueInput) {
+    let soma = 0;
+    let digitosPares = false;
+    for (let i = valueInput.length - 1; i >= 0; i--) {
+      let digito = parseInt(valueInput.charAt(i));
+      if (digitosPares) {
+        digito *= 2;
+        if (digito > 9) {
+          digito -= 9;
+        }
       }
+      soma += digito;
+      digitosPares = !digitosPares;
     }
-    soma += digito;
-    digitosPares = !digitosPares;
-  }
-  // Verifica se o resultado é divisível por 10.
-  return soma % 10 == 0;
-}
-
-/*
-export function maskify(Input) {
-  let security = "";
-  let minhaLista = [];
-  let valueInput = "";
-  let lastNumbers = "";
-  Input.addEventListener("input", function (event) {
-    security = this.value.replace(/\s/g, ""); // remove espaços em branco
-    minhaLista.push(security);
-    for (let i = 0; i < minhaLista.length; i++) {
-      const ultimoNumero = minhaLista[i].toString().slice(-1);
-      valueInput += ultimoNumero;
-    }
+    // Verifica se o resultado é divisível por 10.
+    return soma % 10 === 0;
+  },
+  maskify2: function(input) {
+    const security = input.value; 
+    //console.log("este é o secutiry do maskify " + security);
     const lastFourDigits = security.slice(-4); // pega os últimos quatro dígitos
-    const maskedDigits = security.slice(0, -4).replace(/\d/g, "*"); // substitui os demais dígitos por "*"
+    //console.log("este é o lastFourDigits do maskify " + lastFourDigits);
+    const maskedDigits = security.slice(0, -4).replace(/[A-Za-z0-9]/g, "#"); // substitui os demais dígitos por "#"
+    //console.log("este é o maskedDigits do maskify " + maskedDigits);
     const maskedNumber = maskedDigits + lastFourDigits;
-    this.value = maskedNumber;
-    lastNumbers = valueInput.toString().slice(-16);
-    return parseInt(lastNumbers);
-  });
-}
-*/
-
-export function maskify(input) {
-  let security = "";
-  let minhaLista = [];
-  let valueInput = "";
-  let lastNumbers = "";
-  security = input.value.replace(/\s/g, ""); // remove espaços em branco
-    minhaLista.push(security);
-    for (let i = 0; i < minhaLista.length; i++) {
-      const ultimoNumero = minhaLista[i].toString().slice(-1);
-      valueInput += ultimoNumero;
-    }
-    const lastFourDigits = security.slice(-4); // pega os últimos quatro dígitos
-    const maskedDigits = security.slice(0, -4).replace(/\d/g, "#"); // substitui os demais dígitos por "*"
-    const maskedNumber = maskedDigits + lastFourDigits;
+    //console.log("este é o maskedNumber do maskify " + maskedNumber);
     input.value = maskedNumber;
-    lastNumbers = valueInput.toString().slice(-16);
-    return parseInt(lastNumbers);
+    const test = input.value;
+    return test;
+  },
+
+  maskify: function(input) {
+    
+  }
+
 }
+ 
+export default validator;
+
