@@ -16,8 +16,7 @@ let cardNameFlag = "";
 let valueInput = "";
 const myList = [];
 
-const flagCodes = {
-  //lista de códigos das bandeiras utilizada parta trocar a bandeira do cartão quando o usuário digita
+const flagCodes = {   //lista de códigos das bandeiras utilizada para trocar a bandeira do cartão quando o usuário digita
   visa: [41, 42, 43, 44, 45, 46, 47, 48, 49],
   master1: [51, 52, 53, 54, 55],
   master2: [22, 23, 24, 25, 26, 27],
@@ -26,8 +25,8 @@ const flagCodes = {
   Hipercard: [38, 60]
 };
 
-myInput.addEventListener("input", function () {
-  //Parte do código que mascara os digitos que o usuario coloca no input  
+myInput.addEventListener("input", function () {   //Parte do código que mascara os digitos que o usuario coloca no input 
+ 
   const lastNumbers = validator.maskify2(this);
   myList.push(lastNumbers);
   for (let i = 0; i < myList.length; i++) {
@@ -38,15 +37,10 @@ myInput.addEventListener("input", function () {
 });
 
 myInput.addEventListener("keydown", function (event) {
-  
-  //console.log('este é o teste com type ' + typeof teste); -> utilizei console.log para achar o erro e ver valor e tipo.
   const firstNumbers = teste.slice(0, 2);
-  const intNumber = parseInt(firstNumbers); // => precisei passar para inteiro por meio de outra variável. Ainda não sei o porque que não funcionou usando parse direto no if.
+  const intNumber = parseInt(firstNumbers);   // => precisei passar para inteiro por meio de outra variável. 
   if (event.keyCode === 13) { 
-    alert(teste);
-    //Se apertar a tecla enter
-    if (!teste || /[^0-9*]+/.test(teste)) {
-    //Verifica se foi digitado apenas números e retorna pedindo para reescrever se houver algo diferernte de "0123456789".
+    if (!teste || /[^0-9*]+/.test(teste)) {   //Verifica se foi digitado apenas números e retorna pedindo para reescrever se houver algo diferernte de "0123456789".
       alert('Digite apenas numeros');
     } else {
       for (const chave in flagCodes) {
@@ -56,7 +50,6 @@ myInput.addEventListener("keydown", function (event) {
               cardNameFlag = chave;                                   //console.log("achei " + chave);                       
               continuar = false;                                      //console.log("achei agora " + cardNameFlag);
               if (cardNameFlag === "visa") {                          //console.log("esse deveria ser o " + firstNumbers);                              
-                //console.log("card visa")                            //console.log(typeof cardNameFlag)
                 visa.style.display = "inline";
                 master.style.display = "none";
                 elo.style.display = "none";
@@ -64,7 +57,6 @@ myInput.addEventListener("keydown", function (event) {
                 hipercard.style.display = "none";
 
               }else if (cardNameFlag === "master1" || cardNameFlag === "master2") {
-                //console.log("card master")
                 visa.style.display = "none";
                 master.style.display = "inline";
                 elo.style.display = "none";
@@ -72,7 +64,6 @@ myInput.addEventListener("keydown", function (event) {
                 hipercard.style.display = "none";
 
               } else if (cardNameFlag === "elo") {
-                //console.log("card elo")
                 visa.style.display = "none";
                 master.style.display = "none";
                 elo.style.display = "inline";
@@ -80,7 +71,6 @@ myInput.addEventListener("keydown", function (event) {
                 hipercard.style.display = "none";
 
               } else if (cardNameFlag === "american") {
-                //console.log("card ame")
                 visa.style.display = "none";
                 master.style.display = "none";
                 elo.style.display = "none";
@@ -88,7 +78,6 @@ myInput.addEventListener("keydown", function (event) {
                 hipercard.style.display = "none";
 
               } else if (cardNameFlag === "hipercard") {
-                //console.log("card hiper")
                 visa.style.display = "none";
                 master.style.display = "none";
                 elo.style.display = "none";

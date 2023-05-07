@@ -1,6 +1,6 @@
 const validator = {
 
-  isValid: function(valueInput) {
+  isValid: function (valueInput) {
     let soma = 0;
     let digitosPares = false;
     for (let i = valueInput.length - 1; i >= 0; i--) {
@@ -14,28 +14,24 @@ const validator = {
       soma += digito;
       digitosPares = !digitosPares;
     }
-    // Verifica se o resultado é divisível por 10.
-    return soma % 10 === 0;
+    return soma % 10 === 0; // Verifica se o resultado é divisível por 10.
   },
-  maskify2: function(input) {
-    const security = input.value; 
-    //console.log("este é o secutiry do maskify " + security);
+  maskify2: function (parametro) {
+    const security = parametro.value;
     const lastFourDigits = security.slice(-4); // pega os últimos quatro dígitos
-    //console.log("este é o lastFourDigits do maskify " + lastFourDigits);
     const maskedDigits = security.slice(0, -4).replace(/[A-Za-z0-9]/g, "#"); // substitui os demais dígitos por "#"
-    //console.log("este é o maskedDigits do maskify " + maskedDigits);
     const maskedNumber = maskedDigits + lastFourDigits;
-    //console.log("este é o maskedNumber do maskify " + maskedNumber);
-    input.value = maskedNumber;
-    const test = input.value;
-    return test;
+    parametro.value = maskedNumber;
+    return maskedNumber;
   },
-
-  maskify: function(input) {
-    
+  maskify: function (masked) {
+    const security = masked;
+    const lastFourDigits = security.slice(-4);
+    const maskedDigits = security.slice(0, -4).replace(/[A-Za-z0-9]/g, "#");
+    const maskedNumber = maskedDigits + lastFourDigits;
+    masked = maskedNumber;
+    return maskedNumber;
   }
-
 }
- 
 export default validator;
 
