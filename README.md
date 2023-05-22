@@ -33,7 +33,7 @@ Luhn](https://www.101computing.net/wp/wp-content/uploads/Luhn-Algorithm.png)
 
 ## 2. Resumo do projeto
 
-Neste projeto, criei um aplicativo da Web para validar números de cartão de crédito. Também adicionei a funcionalidade de ocultar todos os dígitos, exceto os quatro últimos. Durante o desenvolvimento, utilizei os fundamentos do JavaScript, como variáveis, condicionais e funções, além de trabalhar com eventos e manipulação do DOM. Também aprimorei meus conhecimentos em HTML e CSS. Além disso, aprendi sobre objetos, estruturas, métodos e iteração em JavaScript. Utilizei um boilerplate para estruturar o projeto em diferentes pastas e aprendi sobre ferramentas de melhoria de código, como linters e testes unitários. Durante o desenvolvimento, também fiz uso do controle de versão com o Git e a plataforma GitHub.
+Neste projeto, criei um pagina Web para validar números de cartão de crédito. Também adicionei a funcionalidade de ocultar todos os dígitos, exceto os quatro últimos. Durante o desenvolvimento, utilizei os fundamentos do JavaScript, como variáveis, condicionais e funções, além de trabalhar com eventos e manipulação do DOM. Também aprimorei meus conhecimentos em HTML e CSS. Além disso, aprendi sobre objetos, estruturas, métodos e iteração em JavaScript. Utilizei um boilerplate para estruturar o projeto em diferentes pastas e aprendi sobre ferramentas de melhoria de código, como linters e testes unitários. Durante o desenvolvimento, também fiz uso do controle de versão com o Git e a plataforma GitHub.
 
 ## 3. Considerações gerais
 
