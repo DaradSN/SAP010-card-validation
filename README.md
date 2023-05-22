@@ -41,6 +41,6 @@ Resolvi este projeto individualmente, seguindo uma abordagem recomendada de 1-3 
 No geral, essa experiência me permitiu consolidar meus conhecimentos em JavaScript e suas principais tecnologias relacionadas, fornecendo uma base sólida para futuros projetos da mesma natureza. Estou satisfeita com o resultado alcançado e animada para continuar desenvolvendo minhas habilidades nessa área. 
 Aprendi que o foco no aprendizado é fundamental e que o processo de desenvolvimento é tão importante quanto o resultado final.
 
-##4. Interface
+## 4. Interface
 
 ![imagem](https://github.com/DaradSN/SAP010-card-validation/assets/128162905/c6d14901-1c2c-4532-a3ae-f960acb3a93a)
